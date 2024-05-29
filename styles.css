@@ -1,0 +1,56 @@
+body {
+    font-family: 'Arial', sans-serif; /* Font family Arial */
+    transition: background-color 0.3s ease; /* Smooth background color change */
+    display: flex; /* Flexbox layout */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Full viewport height */
+    margin: 0; /* No margin */
+    background-color: #f3f3f3; /* Light background color */
+}
+
+.toggle-container {
+    position: relative; /* Positioned relative */
+}
+
+.toggle-label {
+    position: relative; /* Positioned relative */
+    display: inline-block; /* Inline block element */
+    width: 120px; /* Doubled the width */
+    height: 68px; /* Doubled the height */
+    background-color: #d5d4d4; /* Light grey background */
+    border-radius: 68px; /* Doubled the border radius */
+    cursor: pointer; /* Pointer cursor */
+    transition: background-color 0.3s ease; /* Smooth background color change */
+}
+
+.toggle-handle {
+    position: absolute; /* Positioned absolute */
+    top: 4px; /* Adjusted top position */
+    left: 4px; /* Adjusted left position */
+    width: 56px; /* Doubled the width */
+    height: 56px; /* Doubled the height */
+    background-color: #ffffff; /* White background color */
+    border-radius: 56px; /* Doubled the border radius */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light box shadow */
+    transition: transform 0.3s ease; /* Smooth transform change */
+}
+
+input[type="checkbox"] {
+    opacity: 0; /* Invisible checkbox */
+    width: 0; /* Zero width */
+    height: 0; /* Zero height */
+}
+
+input[type="checkbox"]:checked + .toggle-label {
+    background-color: #7c90f0; /* Pastel blue background when checked */
+}
+
+input[type="checkbox"]:checked + .toggle-label .toggle-handle {
+    transform: translateX(52px); /* Adjusted translation */
+}
+
+.dark-mode {
+    background-color: #202124; /* Dark background color */
+    color: #f3f3f3; /* Light text color */
+}
